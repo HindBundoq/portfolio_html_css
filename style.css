@@ -293,3 +293,54 @@ section{
     font-size: 2rem;
     font-weight: 500;
 }
+
+
+@media (max-width: 768px) {
+  .profile-section,
+  .experience-section,
+  .hero-container,
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .profile-pic,
+  .hero-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .experience-card,
+  .job-item {
+    width: 100%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-pic,
+  .hero-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  body {
+    padding: 8px;
+  }
+}
