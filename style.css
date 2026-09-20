@@ -1,8 +1,8 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: poppins;
+    font-family: poppins, sans-serif;
     text-decoration: none;
     scroll-behavior: smooth;
     list-style: none;
@@ -12,10 +12,10 @@ body {
     background-color: #f3f4f6;
 }
 
-header{
+header {
     position: fixed;
-    top:1rem;
-    left:50%;
+    top: 1rem;
+    left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
@@ -29,51 +29,53 @@ header{
     z-index: 10000;
 }
 
-.logo{
+.logo {
     color: #fff;
     font-size: 1.3rem;
-    font-weight:600;
+    font-weight: 600;
     text-wrap: nowrap;
     transition: 0.3s ease-in-out;
 }
 
-.logo:hover{
+.logo:hover {
     transform: scale(1.1);
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     gap: 2rem;
     margin-bottom: 0;
 }
 
-li a{
+li a {
     position: relative;
     color: #fff;
     font-weight: 300;
+    font-size: 0.95rem;
 }
 
-li a::before{
+li a::before {
     position: absolute;
     content: '';
     left: 0;
     width: 0;
-    height: 5px;
+    height: 4px;
     top: 25px;
     border-radius: 1rem;
     transition: width 0.3s ease-in-out;
     background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
 }
 
-li a:hover::before{
+li a:hover::before {
     width: 100%;
 }
 
-.visible-btn{
-    padding:0.8rem 1.5rem;
+.visible-btn {
+    padding: 0.6rem 1.2rem;
     border-radius: 3rem;
-    border:none;
+    border: none;
     font-weight: 500;
+    font-size: 0.9rem;
     color: #fff;
     cursor: pointer;
     text-wrap: nowrap;
@@ -81,42 +83,45 @@ li a:hover::before{
     background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
 }
 
-.visible-btn:hover{
+.visible-btn:hover {
     background: linear-gradient(to right, rgb(255, 0, 255), rgb(0, 157, 255));
     transform: scale(1.03);
 }
 
-#menu-icon{
-    font-size: 2rem;
+#menu-icon {
+    font-size: 1.8rem;
     display: none;
+    color: #fff;
+    cursor: pointer;
 }
 
-section{
+section {
     min-height: auto;
     padding: 5rem 10%;
     width: 100%;
     position: relative;
 }
 
-.about{
+.about {
+    margin-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.about .about-container{
+.about .about-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10rem;
 }
 
-.about img{
+.about img {
     width: 30vw;
     border-radius: 50%;
 }
 
-.info-box{
+.info-box {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -125,30 +130,30 @@ section{
     gap: 1.5rem;
 }
 
-.info-box h3{
+.info-box h3 {
     font-size: 1.8rem;
     font-weight: 500;
     opacity: 0.8;
 }
 
-.info-box h1{
+.info-box h1 {
     font-size: 4rem;
     font-weight: 600;
 }
 
-.info-box span{
+.info-box span {
     background: linear-gradient(to right, rgb(0, 157, 255), rgb(255, 0, 255));
     background-clip: text;
     color: transparent;
     font-size: 2rem;
 }
 
-.btn-group{
+.btn-group {
     display: flex;
     gap: 1rem;
 }
 
-.btn{
+.btn {
     border-radius: 3rem;
     padding: 0.5rem 1.5rem;
     border: 2px solid black;
@@ -158,52 +163,52 @@ section{
     transition: 0.2s ease-in-out;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: black;
     color: white;
 }
 
-.socials{
+.socials {
     display: flex;
     gap: 2rem;
 }
 
-.socials i{
+.socials i {
     font-size: 2.5rem;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
 
-.socials i:hover{
+.socials i:hover {
     transform: scale(1.1);
 }
 
-.section-title{
+.section-title {
     text-align: center;
     font-size: 4rem;
     font-weight: 600;
     margin-bottom: 3rem;
 }
 
-.experience-info{
+.experience-info {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5rem;
 }
 
-.experience img{
+.experience img {
     width: 24vw;
     border-radius: 3rem;
 }
 
-.grid{
+.grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
-.grid-card{
+.grid-card {
     border: 2px solid black;
     border-radius: 3rem;
     padding: 3rem;
@@ -216,18 +221,23 @@ section{
     background-color: #ffffff;
 }
 
-.grid-card:hover{
+.grid-card:hover {
     transform: scale(1.02);
-    background-color: black;
+    background-color: rgb(4, 4, 4);
     color: white;
 }
 
-.grid-card i{
+.grid-card:hover span {
+    color: white;
+    background: none;
+}
+
+.grid-card i {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.grid-card span{
+.grid-card span {
     font-size: 1.5rem;
     font-weight: 500;
     background: linear-gradient(to right, #009dff, #ff00ff);
@@ -235,25 +245,35 @@ section{
     color: transparent;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 20px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background-color: rgb(219, 219, 219);
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, #009dff, #ff00ff);
 }
 
-.projects-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.project-card{
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 350px));
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.project-card {
     padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
@@ -267,80 +287,132 @@ section{
     background-color: #ffffff;
 }
 
-.project-card:hover{
+.project-card:hover {
     background-color: black;
     color: white;
     transform: translateY(-10px) scale(1.02);
 }
 
-.project-card img{
-    width: 20vw;
+.project-card img {
+    width: 100%;
     border-radius: 1rem;
 }
 
-.project-card:hover .btn{
+.project-card:hover .btn {
     border: 2px solid white;
     color: white;
 }
 
-.project-card:hover .btn:hover{
+.project-card:hover .btn:hover {
     border: 2px solid white;
     background-color: white;
     color: black;
 }
 
-.project-card h3{
+.project-card h3 {
     font-size: 2rem;
     font-weight: 500;
 }
 
+.contact-section {
+    width: 100%;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+    border-radius: 1rem;
+    border: 2px solid #ccc;
+    padding: 0.75rem 1rem;
+    transition: 0.3s;
+}
+
+.contact-section form input:focus,
+.contact-section form textarea:focus {
+    border-color: #009dff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 157, 255, 0.25);
+}
+
+@media (max-width: 992px) {
+    .about .about-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .about img {
+        width: 60vw;
+    }
+
+    .experience-info {
+        flex-direction: column-reverse;
+        gap: 3rem;
+    }
+
+    .experience img {
+        width: 50vw;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    header {
+        gap: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+}
 
 @media (max-width: 768px) {
-  .profile-section,
-  .experience-section,
-  .hero-container,
-  .about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-  }
+    .info-box h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
 
-  .profile-pic,
-  .hero-image {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-  }
+    .grid-card {
+        padding: 2rem;
+        align-items: center;
+        text-align: center;
+    }
 
-  .experience-card,
-  .job-item {
-    width: 100%;
-    padding: 15px;
-  }
+    .grid-card i {
+        align-self: center;
+    }
 
-  h1 {
-    font-size: 1.8rem;
-  }
+    .project-card {
+        padding: 2rem 1.5rem;
+        align-items: center;
+        text-align: center;
+    }
 
-  h2 {
-    font-size: 1.4rem;
-  }
+    .project-card img {
+        width: 100%;
+    }
 
-  p {
-    font-size: 0.9rem;
-  }
+    .project-card .btn-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.8rem;
+    }
+
+    .project-card .btn {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
-  .profile-pic,
-  .hero-image {
-    width: 120px;
-    height: 120px;
-  }
-
-  body {
-    padding: 8px;
-  }
+    body {
+        padding: 8px;
+    }
 }
