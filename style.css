@@ -6,6 +6,7 @@
     text-decoration: none;
     scroll-behavior: smooth;
     list-style: none;
+    
 }
 
 body {
@@ -45,6 +46,10 @@ header {
     display: flex;
     gap: 2rem;
     margin-bottom: 0;
+}
+
+a{
+    text-decoration: none;
 }
 
 li a {
